@@ -3,6 +3,7 @@ apiVersion: azure.microsoft.com/v1alpha2
 kind: PostgreSQLServer
 metadata:
   name: postgresqlserver-fsi
+  namespace: demo
 spec:
   location: eastus
   resourceGroup: openenv-wjz8t
@@ -23,6 +24,7 @@ apiVersion: azure.microsoft.com/v1alpha1
 kind: PostgreSQLDatabase
 metadata:
   name: fsi
+  namespace: demo
 spec:
   resourceGroup: openenv-wjz8t
   server: postgresqlserver-fsi
@@ -31,6 +33,7 @@ apiVersion: azure.microsoft.com/v1alpha1
 kind: PostgreSQLFirewallRule
 metadata:
   name: postgresqlfirewallrule-fsi
+  namespace: demo
 spec:
   resourceGroup: openenv-wjz8t
   server: postgresqlserver-fsi
